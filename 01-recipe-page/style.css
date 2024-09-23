@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* CLASSES MODIFICADORAS E VARIÁVEIS */
+:root{
+    --rose: #f3e6d8;
+    --purple: #7b284f;
+    --brown: #854632;
+    --black: #302d2c;
+    --white: #fff;
+    --gray: #e4ded8;
+
+}
+.font-titles{
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: var(--rose);
+    padding: 120px 0 ;
+    overflow-x: hidden;
+}
+.container{
+    width: 736px;
+    padding: 40px;
+    background-color: var(--white);
+    border-radius: 24px;
+}
+.container__img{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.container__img img{
+    width: 100%;
+    border-radius: 12px;
+}
+.content h1{
+    color: var(--black);
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+.content p{
+    font-family: outfit;
+}
+.preparation{
+    background-color: var(--rose);
+    padding: 16px;
+    border-radius: 8px;
+}
+.container .content .preparation h2{
+    color: var(--purple);
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-family: outfit;
+    font-weight: 600;
+}
+.container .content section{
+    margin: 32px 0;
+}
+.container .content section h2{
+    margin-bottom: 16px;
+    color: var(--brown);
+    font-family: "Young Serif", serif;
+    font-size: 28px;
+    font-weight: normal;
+}
+.container .content section ul,
+.container .content section ol{
+    margin-left: 40px;
+}
+.container .content section p,
+.container .content section ul li,
+.container .content section ol li
+{
+    font-family: outfit;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+.container .content section ul li::marker,
+.container .content section ol li::marker{
+    color: var(--brown);
+    font-weight: 700;
+}
+.container .content section ul li span,
+.container .content section ol li span
+{
+    font-weight: 700;
+}
+hr{
+    background: var(--gray);
+    height: 2px;
+}
+.container .content .nutricion{
+    margin: 32px 0 0 0 ;
+}
+
+.nutricion table{
+    font-family: outfit, sans-serif;
+    color: var(--black);
+    width: 100%;
+    border-collapse: collapse;
+}
+.nutricion table tbody tr:not(:last-child){
+    border-bottom: 1px solid var(--gray);
+}
+.nutricion table tr th{
+    padding: 1rem;
+    text-align: left;
+    font-weight: normal;
+}
+.nutricion table tr td{
+    font-weight: bold;
+    color: var(--brown);
+    padding: 1rem;
+}

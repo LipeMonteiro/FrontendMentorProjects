@@ -44,16 +44,28 @@ body{
 .container__item:not(:first-child){
     margin-top: 15px;
 }
+hr{
+    height: 1px;
+    background-color: var(--light-pink);
+    border: none;
+}
 .container__question{
     font-weight: 700;
     color: var(--dark-purple);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+}
+.container__question:hover{
+    color: hsl(292, 99%, 40%);
 }
 .container__response{
     display: none;
     margin-top: 20px;
+    color: var(--purple);
+    font-weight: 500;
+    transition: display .3s linear;
 }
 .icon-plus{
     cursor: pointer;
@@ -62,7 +74,12 @@ body{
     display: none;
     cursor: pointer;
 }
-.container__response{
-    color: var(--purple);
-    font-weight: 500;
+.show .container__response{ 
+    display: block;
+}
+.show .container__question .icon-plus{
+    display: none;
+}
+.show .container__question .icon-minus{
+    display: block;
 }

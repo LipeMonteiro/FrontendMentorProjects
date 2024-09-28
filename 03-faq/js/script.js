@@ -1,11 +1,21 @@
-let cQuestion = document.querySelectorAll('.container__question')
-let item = document.querySelectorAll('.container__item')
+let iconPlus = document.querySelectorAll('.icon-plus')
+let iconMinus = document.querySelectorAll('.icon-minus')
+let containerItem = document.querySelectorAll('.container__item')
 
-
-cQuestion.forEach(element => {
-    element.addEventListener('click', function(){
-        item.forEach(q => {
-            q.classList.toggle('show')
-        })
+//Percorre o array com os ícones
+iconPlus.forEach((icon, index) => {
+    //Evento de click no ícone
+    icon.addEventListener('click', function(){ 
+        //Acessando o item pai a ser mostrado com o index do ícone
+        let item = containerItem[index]
+        //Adicionando a classe show no item pai
+        item.classList.add('show')
     })
-});
+})
+
+iconMinus.forEach((icon, index) => {
+    icon.addEventListener('click', function(){
+        item = containerItem[index]
+        item.classList.remove('show')
+    })
+})
